@@ -22,8 +22,9 @@ spec:
         - containerPort: 80
         volumeMounts:
         - name: apache-storage
-          mountPath: /home/manager/apache2/htdocs
+          mountPath: /usr/local/apache2/htdocs
       volumes:
       - name: apache-storage
         persistentVolumeClaim:
           claimName: apache-pvc
+
