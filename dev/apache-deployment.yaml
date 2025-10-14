@@ -19,3 +19,10 @@ spec:
         image: httpd:2.4
         ports:
         - containerPort: 80
+        volumeMounts:
+        - name: apache-storage
+          mountPath: /usr/local/apache2/htdocs
+      volumes:
+      - name: apache-storage
+        persistentVolumeClaim:
+          claimName: apache-pvc
