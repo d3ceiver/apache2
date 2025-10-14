@@ -7,6 +7,6 @@ spec:
     app: apache
   type: NodePort
   ports:
-  - port: 80           # Service port inside cluster
-    targetPort: 80     # Container port
-    nodePort: 30080    # External port on your Pi (must be between 30000–32767)
+  - port: 80
+    targetPort: 80
+    nodePort: 30080
